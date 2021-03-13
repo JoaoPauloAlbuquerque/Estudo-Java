@@ -1,4 +1,4 @@
-package estruturas_de_decisao;
+package estruturas_condicionais;
 
 public class EstruturasDeDecisao {
     public static void main(String[] args){
