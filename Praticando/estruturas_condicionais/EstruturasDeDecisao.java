@@ -12,12 +12,15 @@ public class EstruturasDeDecisao {
         }else{
             maior = n2;
         }
+        
+        
         //=========================================
         int n3 = 25;
         int n4 = 30;
-
+        int maior1 = 0;
+        
         //OPERADOR TERNÁRIO
-        int maior1 = n3>n4?n3:n4;
+        maior1 = n3>n4?n3:n4;
 
         System.out.println(maior);
         System.out.println(maior1);
