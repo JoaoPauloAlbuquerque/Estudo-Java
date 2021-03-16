@@ -1,4 +1,4 @@
-package classe_scanner;
+package basico.classe_scanner;
 
 import java.util.*;
 

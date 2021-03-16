@@ -1,4 +1,4 @@
-package constantes;
+package basico.constantes;
 
 public class Constantes {
     public static void main(String[] args){

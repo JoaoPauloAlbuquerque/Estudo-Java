@@ -1,4 +1,4 @@
-package variaveis;
+package basico.variaveis;
 
 public class TrabalhandoVariaveis{
     public static void main(String[] args){
