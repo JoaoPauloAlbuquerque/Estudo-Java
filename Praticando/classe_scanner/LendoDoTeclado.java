@@ -1,11 +1,10 @@
 package classe_scanner;
 
 import java.util.*;
-import java.math.*;
 
 public class LendoDoTeclado {
     public static void main(String[] args){
-        
+
         Scanner teclado = new Scanner(System.in);
 
         String nome = "";
