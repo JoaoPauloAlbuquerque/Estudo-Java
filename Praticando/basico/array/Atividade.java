@@ -4,19 +4,21 @@ import java.util.Scanner;
 
 public class Atividade {
     public static void main(String[] args){
-        
+
+        //CRIANDO OS ARRAYS
         char[] gabarito = {'b','b', 'c', 'c'};
         String[] questoes = {"1) Quanto é 1 + 1?", "2) quanto é 15 - 5? ", "3) Quanto é 5 x 5?", "4) Quanto é a raiz quadrada de 81?"};
         String[][] alternativas = {{"a) 1", "b) 2", "c) 3", "d) 4", "e) 5"}, {"a) 5", "b) 10", "c) 15", "d) 20", "e) 25"}, {"a) 15", "b) 20", "c) 25", "d) 30", "e) 35"},{"a) 3", "b) 6", "c) 9", "d) 12", "e) 15"}}; 
         char[] respostas = new char[4];
 
+        //CRIANDO E ATRIBUNDO VARAIVEIS DE CONTROLE DE NOTAS
         float nota = 0.0f;
-        double incre = 0.0f;
-        incre = 1.0 / gabarito.length;
-        System.out.println(incre);
+        double incre = 1.0 / gabarito.length;
 
+        //OBJETO DE SCANNER
         Scanner scan = new Scanner(System.in);
 
+        //LOOP PARA MOSTRAR AS QUESTÕES
         for(int i = 0; i < questoes.length; i++){
             System.out.println(questoes[i]);
             for(int j = 0; j < alternativas[0].length; j++){
@@ -41,6 +43,7 @@ public class Atividade {
             }
         }
 
+        //IMPRIMINDO AS NOTAS
         nota = nota * 10;
         System.out.println("\nSua nota foi = " + nota);
     }
