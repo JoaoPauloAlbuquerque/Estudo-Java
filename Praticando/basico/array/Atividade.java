@@ -17,7 +17,7 @@ public class Atividade {
         char[] gabarito = {'b','b', 'c', 'c'};
         String[] questoes = {"1) Quanto é 1 + 1?", "2) quanto é 15 - 5? ", "3) Quanto é 5 x 5?", "4) Quanto é a raiz quadrada de 81?"};
         String[][] alternativas = {{"a) 1", "b) 2", "c) 3", "d) 4", "e) 5"}, {"a) 5", "b) 10", "c) 15", "d) 20", "e) 25"}, {"a) 15", "b) 20", "c) 25", "d) 30", "e) 35"},{"a) 3", "b) 6", "c) 9", "d) 12", "e) 15"}}; 
-        char[] respostas = new char[4];
+        char[] respostas = new char[gabarito.length];
 
         //CRIANDO E ATRIBUNDO VARAIVEIS DE CONTROLE DE NOTAS
         float nota = 0.0f;
