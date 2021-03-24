@@ -1,3 +1,11 @@
+
+/*
+*       PROVA DE MATEMÁTICA
+*   SÃO DISPOSTO 4 QUESTÕES DE  MULTIPLA ESCOLA, 
+*   O USUÁRIO DEVE ESCOLHER UMA DE CADA E AO FINAL
+*   ELE RECEBERÁ UMA NOTA DE ACORDO COM AS ALTERNATICAS ACERTADAS.
+*/
+
 package basico.array;
 
 import java.util.Scanner;
@@ -44,7 +52,17 @@ public class Atividade {
         }
 
         //IMPRIMINDO AS NOTAS
+
+        System.out.println("QUESTÕES CORRETAS:");
+        for(int i = 0; i < gabarito.length; i++){
+            if(gabarito[i] == respostas[i]){
+                System.out.printf("Questão %d: %c - acertou\n", i + 1, respostas[i]);
+            }else{
+                System.out.printf("Questão %d: %c - errou | correta letra %c\n", i + 1, respostas[i], gabarito[i]);
+            }
+        }
+
         nota = nota * 10;
-        System.out.println("\nSua nota foi = " + nota);
+        System.out.printf("\nSua nota foi = %.1f\n\n", nota);
     }
 }
