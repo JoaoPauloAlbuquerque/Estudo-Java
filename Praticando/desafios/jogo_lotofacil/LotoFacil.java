@@ -41,29 +41,35 @@ public class LotoFacil {
 
     //MÉTODO PARA LER OS DADOS DA PRIMEIRA E SEGUNDA SEMANA
     private void lerDados(){
+        int n;
         System.out.println("Digite o resultado da primeira semana:");
         for(int i = 0; i < TAM; i++){
-            int n = t.nextInt();
-            if(percorrerArray(primeriraSemana, n) != 0){    //VERIFICANDO SE O NÚMERO JA FOI DIGITADO
-                System.out.println("Numero já digitado!");
-            }else{
+            n = t.nextInt();
+            if(primeriraSemana.size() == 0){
                 primeriraSemana.add(n);
-                int index = percorrerArray(numeros, n);
-                percentual.set(index, percentual.get(index) - 1);
             }
-
+            while(percorrerArray(primeriraSemana, n) != 0){    //VERIFICANDO SE O NÚMERO JA FOI DIGITADO
+                System.out.println("Numero já digitado!");
+                n = t.nextInt();
+            }
+            primeriraSemana.add(n);
+            int index = percorrerArray(numeros, n);
+            percentual.set(index, percentual.get(index) - 1);
         }
         
         System.out.println("Digite o resultado da segunda semana:");
         for(int i = 0; i < TAM; i++){
-            int n = t.nextInt();
-            if(percorrerArray(segundaSemana, n) != 0){      //VERIFICANDO SE O NÚMERO JA FOI DIGITADO
-                System.out.println("Numero já digitado!");
-            }else{
+            n = t.nextInt();
+            if(segundaSemana.size() == 0){
                 segundaSemana.add(n);
-                int index = percorrerArray(numeros, n);
-                percentual.set(index, percentual.get(index) - 1);
             }
+            while(percorrerArray(segundaSemana, n) != 0){      //VERIFICANDO SE O NÚMERO JA FOI DIGITADO
+                System.out.println("Numero já digitado!");
+                n = t.nextInt();
+            }
+            segundaSemana.add(n);
+            int index = percorrerArray(numeros, n);
+            percentual.set(index, percentual.get(index) - 1);  
         }
     }
 
