@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch LotoFacil",
+            "request": "launch",
+            "mainClass": "desafios.jogo_lotofacil.LotoFacil",
+            "projectName": "Estudo-Java_46c1249a"
+        },
+        {
+            "type": "java",
             "name": "Launch ArraysDeArrays",
             "request": "launch",
             "mainClass": "basico.matrizes.ArraysDeArrays",
