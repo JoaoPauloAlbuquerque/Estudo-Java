@@ -40,7 +40,7 @@ public class LotoFacil {
         }
     }
 
-
+    //MÉTODO PARA LER DO TECLADO
     private void ler(ArrayList<Integer> array){
         int n;
         for(int i = 0; i < TAM; i++){
@@ -52,13 +52,17 @@ public class LotoFacil {
                 System.out.println("Numero já digitado!");
                 n = t.nextInt();
             }
+            while(n < 1 || n > 25){
+                System.out.println("Número inválido!\nDgite um número entre 1 e 25!");
+                n = t.nextInt();
+            }
             array.add(n);
             int index = percorrerArray(numeros, n);
             percentual.set(index, percentual.get(index) - 1);
         }
     }
 
-    //MÉTODO PARA LER OS DADOS DA PRIMEIRA E SEGUNDA SEMANA
+    //MÉTODO PARA LER OS DADOS DOS 3 ULTIMOS RESULTADOS
     private void lerDados(){
         System.out.println("Digite o resultado da primeira semana:");
         ler(primeriraSemana);
@@ -68,7 +72,7 @@ public class LotoFacil {
         ler(terceiraSemana);
     }
 
-    //MÉTODO PARA PERCORRER O ARRAYLIST E PEGAR O INDEX
+    //MÉTODO PARA PERCORRER O ARRAYLIST E PEGAR O INDEX DO ELEMENTO N
     private int percorrerArray(ArrayList<Integer> array, int n){
         int index = 0;
         for(int i = 0; i < array.size(); i++){
@@ -82,60 +86,39 @@ public class LotoFacil {
     //MÉTODO PARA SELECIONAR OS RESULTADOS
     private void addResultado(){
 
-        //SELECIONANDO OS INDEXS DOS ELEMENTOS COM MAIS FRENQUENCIA
-        /*int index = 0;
-        for(int i = 0; i < 25; i++){
-            if(percentual.get(i) >= percentual.get(index)){
-                indexMaior.add(i);
-                index++;
-            }else{
-                indexMaior.add(0, i);
-            }
-        }*/
-
-        for(int i = 0; i < 25; i++){
-            if(percentual.get(i) == 10){
+        for(int i = 0; i < TAM1; i++){
+            if(percentual.get(i) == 10){                //
                 indexMaior.add(i);
             }
         }
-        for(int i = 0; i < 25; i++){
-            if(percentual.get(i) == 9){
+        for(int i = 0; i < TAM1; i++){
+            if(percentual.get(i) == 9){                 //
+                indexMaior.add(i);                  
+            }                                                    //SELECIONANDO OS NUMEROS COM MENOR INDICES DE REPETIÇÃO
+        }
+        for(int i = 0; i < TAM1; i++){
+            if(percentual.get(i) == 8){                 //
                 indexMaior.add(i);
             }
         }
-        for(int i = 0; i < 25; i++){
-            if(percentual.get(i) == 8){
-                indexMaior.add(i);
-            }
-        }
-        for(int i = 0; i < 25; i++){
-            if(percentual.get(i) == 7){
+        for(int i = 0; i < TAM1; i++){   
+            if(percentual.get(i) == 7){                 //
                 indexMaior.add(i);
             }
         }
 
-        //ADICIONANDO OS ELEMENTOS NO RESULTADO
-        //int j = 24;
-        for(int i = 0; i < 15; i++){
+        //ADICIONANDOS OS NUMEROS NO RESULTADO
+        for(int i = 0; i < TAM; i++){
             resultado.add(numeros.get(indexMaior.get(i)));
-            //j--;
         }
     }
 
     //IMPTIMINO OS NUMEROS PREMIADOS
     private void imprimir(){
-        //Collections.sort(resultado);
-        for(int i:percentual){
-            System.out.printf("%2d - ", i);
-        }
-        System.out.print("\n");
-        for(int i:indexMaior){
-            System.out.printf("%2d - ", i);
-        }
-        System.out.print("\n");
+        Collections.sort(resultado); //COLOCANDO OS NUMEROS EM ORDEM
         System.out.print("\nEstes são os números do próximo sorteio: ");
         for(int i = 0; i < resultado.size(); i++){
-            if(i == resultado.size() - 1){
+            if(i == resultado.size() - 1){  //VERIFICANDO SE O INTEM É O ULTIMO DA POSIÇÃO
                 System.out.printf("%d\n\n", resultado.get(i));
             }else{
                 System.out.printf("%d - ", resultado.get(i));
