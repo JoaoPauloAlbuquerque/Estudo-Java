@@ -12,6 +12,8 @@ public class LotoFacil {
     private ArrayList<Integer> primeriraSemana = new ArrayList<Integer>();
     private ArrayList<Integer> segundaSemana = new ArrayList<Integer>();
     private ArrayList<Integer> terceiraSemana = new ArrayList<Integer>();
+    private ArrayList<Integer> quartaSemana = new ArrayList<Integer>();
+    private ArrayList<Integer> quintaSemana = new ArrayList<Integer>();
     private ArrayList<Integer> indexMaior = new ArrayList<Integer>();
     private ArrayList<Integer> resultado = new ArrayList<Integer>();
 
@@ -70,6 +72,10 @@ public class LotoFacil {
         ler(segundaSemana);
         System.out.println("Digite o resultado da terceira semana: ");
         ler(terceiraSemana);
+        System.out.println("Digite o resultado da quarta semana: ");
+        ler(quartaSemana);
+        System.out.println("Digite o resultado da quinta semana: ");
+        ler(quintaSemana);
     }
 
     //MÉTODO PARA PERCORRER O ARRAYLIST E PEGAR O INDEX DO ELEMENTO N
