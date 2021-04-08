@@ -1,4 +1,4 @@
-package intermediario;
+package intermediario.tela_login;
 
 import javax.swing.*;
 import java.awt.*;
