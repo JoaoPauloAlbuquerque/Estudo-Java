@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Launch Main",
             "request": "launch",
+            "mainClass": "desafios.simulacao_calculos_gui.gui.principal.Main",
+            "projectName": "Estudo-Java_46c1249a"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
             "mainClass": "intermediario.lotofacil_gui.Main",
             "projectName": "Estudo-Java_46c1249a"
         },
