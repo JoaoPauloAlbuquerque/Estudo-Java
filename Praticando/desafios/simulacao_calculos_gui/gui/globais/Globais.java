@@ -201,7 +201,7 @@ public class Globais {
 		button.setBorder(new LineBorder(Color.BLACK));
 	}
 	
-	public static JTable configTable(JTable tbl) {
+	public static void configTable(JTable tbl) {
 		tbl.setFillsViewportHeight(true);
 		tbl.setRowHeight(30);	//define a altura da linha
 		tbl.setFont(fontCellTable);
@@ -226,7 +226,6 @@ public class Globais {
 		for(int i = 0; i < tbl.getModel().getColumnCount(); i++) {
 			tbl.getColumnModel().getColumn(i).setCellRenderer(cellRender);
 		}
-		return tbl;
 	}
 	public static JTable configTableResult(JTable tbl){
 		tbl.setFillsViewportHeight(true);
